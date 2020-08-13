@@ -1,0 +1,14 @@
+<%= render 'layouts/shared/banner' %>
+<div class="wrapper" id="cocktails-list">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-trip">
+        <img src="https://source.unsplash.com/random/250x150" />
+          <div class="card-trip-infos">
+            <div>
+              <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+            </div>
+            <%= link_to 'Je découvre', cocktail_path(cocktail.id), class:'card-trip-pricing' %>
+        </div>
+      </div>
+    <% end %>
+</div>

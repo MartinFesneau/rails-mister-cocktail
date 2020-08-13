@@ -1,0 +1,28 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 100vh;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  font-size: 10em;
+  font-weight: 300;
+  font-family: 'Robot' sans-serif;
+  text-align: center;
+}
+
+.banner p {
+  font-size: 6em;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.buttons-banner {
+  display: flex;
+  justify-content: space-around;
+}
