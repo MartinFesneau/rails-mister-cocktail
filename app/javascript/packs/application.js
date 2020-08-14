@@ -17,8 +17,10 @@ import 'bootstrap';
 // const imagePath = (name) => images(name, true)
 
 import { InitSelect } from "../components/select";
+import { AOS }  from '../components/aos';
 
 
 document.addEventListener('turbolinks:load', () => {
     InitSelect();
+    AOS.init();
 });

@@ -1,16 +1,25 @@
-<div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <%= link_to 'Back to cocktails list', cocktails_path, class: 'btn btn-primary' %>
+<div class="container mt-5">
+    <%= link_to 'Back to cocktails list', cocktails_path, class: 'btn-sncf' %>
 
-  <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail)  %>
-
-  <ul>
-    <% @cocktail.doses.each do |dose| %>
-      <li><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to dose_path(dose.id),  
-        method: :delete, 
-        data: { confirm: 'Are you sure ?'} do %>
-            <i class="fas fa-dumpster-fire"></i>
-          <% end %>
-      <% end %>
-  </ul>
+  <div class="wrapper-show">
+      <div class="show-content">
+      <div class="show-img">
+        <h1><%= @cocktail.name %></h1>
+        <p><%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %></p>
+      </div>
+      <div class="ingredients">
+        <h2>Ingredients: </h2>
+        <ul>
+          <% @cocktail.doses.each do |dose| %>
+            <li><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to dose_path(dose.id),  
+              method: :delete, 
+              data: { confirm: 'Are you sure ?'} do %>
+                  <i class="fas fa-dumpster-fire"></i>
+                <% end %>
+            <% end %>
+        </ul>
+        <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: 'btn-sncf'  %>
+      </div>
+    </div>
+  </div>
 </div>
