@@ -7,6 +7,7 @@
 .show-content {
   display: flex;
   justify-content: space-around;
+  // position: relative;
 }
 
 img {
@@ -19,3 +20,8 @@ h1,h2 {
   color:#A1006B ;
 }
 
+// .ingredients {
+//   position: absolute;
+//   right: 127px;
+//   bottom: 209px;
+// }

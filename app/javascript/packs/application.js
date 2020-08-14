@@ -17,10 +17,11 @@ import 'bootstrap';
 // const imagePath = (name) => images(name, true)
 
 import { InitSelect } from "../components/select";
-import { AOS }  from '../components/aos';
+import { AOSInitializer }  from '../components/aos';
+import { sncf } from '../components/sound';
 
-
-document.addEventListener('turbolinks:load', () => {
-    InitSelect();
-    AOS.init();
+window.addEventListener('turbolinks:load', () => {
+  InitSelect();
+  AOSInitializer();
+  sncf();
 });
