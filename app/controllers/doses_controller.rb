@@ -1,4 +1,4 @@
-class DosesController < ApplicationController
+rclass DosesController < ApplicationController
 
   def new
     @cocktail = Cocktail.find(params[:cocktail_id])
